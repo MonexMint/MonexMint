@@ -1,0 +1,58 @@
+/* ── Chart Container ──────────────────────────────────────────
+   FIX: was background: linear-gradient(to bottom, #f8fafc, #ffffff)
+   That's a hardcoded white gradient — causes the white box in dark mode.
+   Now: transparent so it inherits the Card's dark background.
+   ─────────────────────────────────────────────────────────── */
+.chartContainer {
+  width: 100%;
+  margin: 1rem 0 0;
+  padding: 0.75rem 0;
+  background: transparent;
+  border-radius: 1.25rem;
+}
+
+/* FIX: tooltip was background: white, border: #e2e8f0 — hardcoded */
+.tooltip {
+  background: var(--bg-primary);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+.tooltipItem {
+  margin-bottom: 0.5rem;
+}
+.tooltipItem:last-child {
+  margin-bottom: 0;
+}
+
+/* FIX: was color: #0f172a — hardcoded black */
+.tooltipLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  color: var(--text-primary);
+}
+
+.tooltipValue {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--secondary);
+}
+
+/* Make recharts SVG text readable in dark mode */
+.chartContainer :global(.recharts-legend-item-text) {
+  color: var(--text-secondary) !important;
+}
+.chartContainer :global(.recharts-text tspan) {
+  fill: var(--text-secondary) !important;
+}
+.chartContainer :global(.recharts-cartesian-axis-tick-value) {
+  fill: var(--text-tertiary) !important;
+}
+.chartContainer :global(.recharts-cartesian-grid line) {
+  stroke: var(--border-color) !important;
+}

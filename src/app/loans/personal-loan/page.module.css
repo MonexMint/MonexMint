@@ -1,0 +1,217 @@
+/* ═══════════════════════════════════════════════════════════
+   page.module.css — Home Loan Calculator Styles
+   Place in: app/loans/home-loan/page.module.css
+   ═══════════════════════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════════
+   EMI Calculator — page.module.css
+   Full dark theme support
+   ═══════════════════════════════════════════════ */
+
+.page {
+  min-height: calc(100vh - 64px);
+  background: var(--bg-secondary);
+  padding: 2.5rem 0 5rem;
+  transition: background 0.3s ease;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ── Page Header ──────────────────────────── */
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+/* ── Two-column layout ────────────────────── */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.formSection,
+.resultsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form { display: flex; flex-direction: column; }
+
+.loading {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+/* ── EMI Result Card ──────────────────────── */
+.emiCard {
+  text-align: center;
+  animation: fadeInUp 0.4s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.emiResult { padding: 0.75rem 0; }
+.emiLabel  { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; opacity: 0.9; }
+.emiValue  { font-size: 3rem; font-weight: 800; font-family: 'JetBrains Mono', monospace; line-height: 1; }
+
+/* ── Summary Grid ─────────────────────────── */
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* 
+  CRITICAL FIX: Use CSS variables instead of hardcoded #f8fafc
+  so cards adapt to dark theme properly.
+*/
+.summaryItem {
+  padding: 1rem;
+  background: var(--bg-secondary);   /* adapts to dark: #0f1629 */
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+  transition: background 0.3s ease;
+}
+
+.summaryLabel {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.summaryValue {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Color overrides for specific summary values */
+.colorWarning { color: #f59e0b !important; }
+.colorPurple  { color: #6366f1 !important; }
+
+/* ── Placeholder ──────────────────────────── */
+.placeholder {
+  text-align: center;
+  padding: 3.5rem 2rem;
+}
+.placeholderIcon { font-size: 3.5rem; margin-bottom: 1rem; opacity: 0.4; }
+.placeholderText { font-size: 1rem; color: var(--text-tertiary); margin: 0; }
+
+/* ── Amortization ─────────────────────────── */
+.amortCard { margin-top: 0.5rem; }
+
+.toggleGroup {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+}
+
+.amortTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  min-width: 560px;
+}
+
+.amortTable thead {
+  background: var(--bg-secondary);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.amortTable th {
+  padding: 0.875rem 1rem;
+  text-align: right;
+  font-weight: 700;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border-color);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.amortTable th:first-child { text-align: left; }
+
+.amortTable td {
+  padding: 0.7rem 1rem;
+  text-align: right;
+  border-bottom: 1px solid var(--border-color);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.84rem;
+  color: var(--text-primary);
+}
+.amortTable td:first-child {
+  text-align: left;
+  font-weight: 700;
+  color: var(--primary);
+  font-family: var(--font-primary);
+}
+
+.amortTable tbody tr:hover { background: var(--bg-tertiary); }
+.amortTable tbody tr:nth-child(even) { background: var(--bg-secondary); }
+.amortTable tbody tr:nth-child(even):hover { background: var(--bg-tertiary); }
+
+/* ── Info Card ────────────────────────────── */
+.infoCard { margin-top: 1.5rem; }
+.infoCard h2 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary); }
+.infoCard h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; color: var(--text-primary); }
+.infoCard p  { color: var(--text-secondary); line-height: 1.75; margin-bottom: 0.75rem; }
+.infoCard ul { color: var(--text-secondary); line-height: 1.75; padding-left: 1.5rem; margin: 0; }
+.infoCard li { margin-bottom: 0.4rem; }
+
+/* ── Responsive ───────────────────────────── */
+@media (max-width: 968px) {
+  .content { grid-template-columns: 1fr; }
+  .title   { font-size: 2rem; }
+  .summaryGrid { grid-template-columns: 1fr 1fr; }
+  .emiValue { font-size: 2.5rem; }
+}
+
+@media (max-width: 640px) {
+  .page { padding: 1.5rem 0 4rem; }
+  .container { padding: 0 1rem; }
+  .summaryGrid { grid-template-columns: 1fr; }
+  .amortTable th, .amortTable td { padding: 0.5rem 0.65rem; font-size: 0.75rem; }
+  .toggleGroup { gap: 0.5rem; }
+}

@@ -1,0 +1,61 @@
+/* ═══════════════════════════════════════════════
+   CalculatorLayout — shared wrapper CSS
+   Used by all calculators via CalculatorLayout.jsx
+   ═══════════════════════════════════════════════ */
+
+.page {
+  min-height: calc(100vh - 64px);
+  background: var(--bg-secondary);
+  padding: 2.5rem 0 5rem;
+  transition: background 0.3s ease;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.resultsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (max-width: 968px) {
+  .content { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .page      { padding: 1.5rem 0 4rem; }
+  .container { padding: 0 1rem; }
+}

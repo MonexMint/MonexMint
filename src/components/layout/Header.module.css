@@ -1,0 +1,146 @@
+/* ═══════════════════════════════════════════════
+   MONEX MINT — Header
+   Glass on scroll · hamburger always visible
+   ═══════════════════════════════════════════════ */
+
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 9999;
+  height: 64px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transparent { background: transparent; }
+
+.scrolled {
+  background: rgba(7,11,24,0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.07), 0 4px 20px rgba(0,0,0,0.3);
+}
+
+[data-theme="light"] .scrolled {
+  background: rgba(255,255,255,0.94);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.07), 0 4px 20px rgba(15,23,42,0.08);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* ── Logo ──────────────────────────── */
+.logo { display: flex; align-items: center; gap: 0.55rem; text-decoration: none; flex-shrink: 0; }
+.logoImg { height: 32px !important; width: auto !important; object-fit: contain; }
+.logoText {
+  font-size: 1.05rem; font-weight: 900; letter-spacing: 0.05em;
+  background: linear-gradient(135deg, #2dd4bf 0%, #60a5fa 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  white-space: nowrap;
+}
+
+/* ── Desktop Nav ───────────────────── */
+.nav { display: flex; align-items: center; gap: 0.15rem; }
+.navLink {
+  color: rgba(255,255,255,0.75); text-decoration: none; font-weight: 600;
+  font-size: 0.875rem; padding: 0.45rem 0.85rem; border-radius: 0.5rem;
+  transition: color 0.2s, background 0.2s; white-space: nowrap;
+}
+.navLink:hover { color: #fff; background: rgba(255,255,255,0.1); }
+[data-theme="light"] .navLink { color: #1e293b; }
+[data-theme="light"] .scrolled .navLink { color: #475569; }
+[data-theme="light"] .navLink:hover { color: #0f172a; background: rgba(15,23,42,0.08); }
+[data-theme="light"] .scrolled .navLink:hover { color: #0f172a; background: rgba(15,23,42,0.06); }
+
+/* ── Theme Toggle ──────────────────── */
+.themeBtn {
+  all: unset; box-sizing: border-box; cursor: pointer;
+  margin-left: 0.25rem; width: 36px; height: 36px;
+  border-radius: 8px; background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15); color: white;
+  font-size: 1rem; display: flex; align-items: center;
+  justify-content: center; flex-shrink: 0; transition: background 0.2s;
+}
+.themeBtn:hover { background: rgba(255,255,255,0.2); }
+
+/* ── Mobile Hamburger ──────────────── */
+.mobileMenuBtn {
+  all: unset; box-sizing: border-box; cursor: pointer;
+  display: none; flex-direction: column; justify-content: center;
+  align-items: center; gap: 5px; width: 42px; height: 42px;
+  border-radius: 8px; background: rgba(255,255,255,0.14);
+  border: 1.5px solid rgba(255,255,255,0.35); flex-shrink: 0;
+  transition: background 0.2s;
+}
+.mobileMenuBtn:hover { background: rgba(255,255,255,0.24); }
+
+.bar { display: block; width: 18px; height: 2px; background: #ffffff; border-radius: 2px; pointer-events: none; }
+
+/* ── Mobile Dropdown ───────────────── */
+.mobileMenu {
+  position: absolute; top: 64px; left: 0; right: 0;
+  background: rgba(7,11,24,0.97);
+  backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  padding: 0.5rem 1rem 1rem; display: flex; flex-direction: column;
+  gap: 0.1rem; animation: dropIn 0.18s ease;
+}
+[data-theme="light"] .mobileMenu { background: rgba(255,255,255,0.97); border-bottom-color: rgba(0,0,0,0.07); }
+
+@keyframes dropIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.mobileMenu a {
+  all: unset; box-sizing: border-box; display: block;
+  color: rgba(255,255,255,0.85); font-weight: 600; font-size: 0.95rem;
+  padding: 0.75rem 1rem; border-radius: 0.5rem; cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.mobileMenu a:hover { background: rgba(255,255,255,0.08); color: #fff; }
+[data-theme="light"] .mobileMenu a { color: #475569; }
+[data-theme="light"] .mobileMenu a:hover { background: rgba(15,23,42,0.05); color: #0f172a; }
+
+.mobileThemeBtn {
+  all: unset; box-sizing: border-box; cursor: pointer; display: block;
+  margin-top: 0.25rem; width: 100%; padding: 0.75rem 1rem; border-radius: 8px;
+  background: linear-gradient(135deg, #0d9488, #2563eb); color: white;
+  font-weight: 700; font-size: 0.875rem; transition: opacity 0.2s;
+}
+.mobileThemeBtn:hover { opacity: 0.88; }
+
+/* ── Responsive ────────────────────── */
+@media (max-width: 768px) {
+  .nav { display: none; }
+  .mobileMenuBtn { display: flex; }
+  .container { padding: 0 1rem; }
+  .logoText { font-size: 0.92rem; }
+}
+
+/* ── Light theme transparent state fixes ─── */
+/* Theme toggle button visible on light bg */
+[data-theme="light"] .themeBtn {
+  background: rgba(15,23,42,0.07);
+  border-color: rgba(15,23,42,0.15);
+  color: #1e293b;
+}
+[data-theme="light"] .themeBtn:hover {
+  background: rgba(15,23,42,0.12);
+}
+
+/* Hamburger bars dark on light bg */
+[data-theme="light"] .bar {
+  background: #1e293b;
+}
+[data-theme="light"] .mobileMenuBtn {
+  background: rgba(15,23,42,0.07);
+  border-color: rgba(15,23,42,0.2);
+}

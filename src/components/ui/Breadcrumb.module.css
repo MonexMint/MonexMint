@@ -1,0 +1,59 @@
+/* ═══════════════════════════════════════════
+   Breadcrumb — ET Money style
+   ═══════════════════════════════════════════ */
+
+.nav {
+  margin-bottom: 1.5rem;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.link {
+  color: var(--primary, #0d9488);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+
+.link:hover {
+  color: var(--primary-dark, #0f766e);
+  text-decoration: underline;
+}
+
+.sep {
+  color: var(--text-tertiary, #94a3b8);
+  font-size: 0.85rem;
+  line-height: 1;
+  user-select: none;
+}
+
+.current {
+  color: var(--text-secondary, #64748b);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Dark theme */
+[data-theme="dark"] .link   { color: #2dd4bf; }
+[data-theme="dark"] .link:hover { color: #5eead4; }
+[data-theme="dark"] .sep    { color: #475569; }
+[data-theme="dark"] .current { color: #94a3b8; }
+
+@media (max-width: 640px) {
+  .link, .sep, .current { font-size: 0.78rem; }
+}
