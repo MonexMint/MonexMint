@@ -1,4 +1,4 @@
-﻿import PPFCalculator from './ppfcalculator';
+﻿import PPFCalculator from './PpfCalculator';
 
 export const metadata = {
   title: 'PPF Calculator | My Wealth Circle',

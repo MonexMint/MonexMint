@@ -1,4 +1,4 @@
-﻿import NPSCalculator from './npscalculator';
+﻿import NPSCalculator from './NpsCalculator';
 
 export const metadata = {
   title: 'NPS Calculator | My Wealth Circle',
