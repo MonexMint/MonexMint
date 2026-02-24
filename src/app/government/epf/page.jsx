@@ -1,4 +1,4 @@
-﻿import EPFCalculator from './EpfCalculator.jsx';
+﻿import EPFCalculator from './Epfcalculator.jsx';
 
 export const metadata = {
   title: 'EPF Calculator | My Wealth Circle',
