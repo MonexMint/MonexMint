@@ -7,7 +7,7 @@ import InvestmentBarChart from '@/components/charts/InvestmentBarChart';
 import AdSlot from '@/components/ads/AdSlot';
 import { calculatePPF } from '@/lib/calculators';
 import { formatCurrency } from '@/lib/constants';
-import styles from './page.module.css';
+import styles from './Page.module.css';
 import Breadcrumb from '@/components/ui/Breadcrumb';
 import { BREADCRUMBS } from '@/lib/breadcrumbs';
 
