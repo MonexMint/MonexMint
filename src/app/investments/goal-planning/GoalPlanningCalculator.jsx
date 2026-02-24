@@ -8,6 +8,8 @@ import AdSlot from '@/components/ads/AdSlot';
 import { calculateGoalPlanning } from '@/lib/calculators';
 import { formatCurrency, GOAL_TYPES } from '@/lib/constants';
 import styles from './page.module.css';
+import Breadcrumb from '@/components/ui/Breadcrumb';
+import { BREADCRUMBS } from '@/lib/breadcrumbs';
 
 const DEBOUNCE_MS = 300;
 
@@ -57,6 +59,8 @@ export default function GoalPlanningCalculator() {
   return (
     <div className={styles.page}>
       <div className={styles.container}>
+
+        <Breadcrumb items={BREADCRUMBS.goalPlanning} />
 
         <div className={styles.header}>
           <h1 className={styles.title}>Goal Planning Calculator</h1>

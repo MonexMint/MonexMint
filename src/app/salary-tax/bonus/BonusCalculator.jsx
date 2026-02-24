@@ -8,6 +8,8 @@ import AdSlot from '@/components/ads/AdSlot';
 import { calculateBonus } from '@/lib/calculators';
 import { formatCurrency } from '@/lib/constants';
 import styles from './page.module.css';
+import Breadcrumb from '@/components/ui/Breadcrumb';
+import { BREADCRUMBS } from '@/lib/breadcrumbs';
 
 const DEBOUNCE_MS = 300;
 
@@ -53,6 +55,8 @@ export default function BonusCalculator() {
     <div className={styles.page}>
       <div className={styles.container}>
 
+        <Breadcrumb items={BREADCRUMBS.bonus} />
+        
         <div className={styles.header}>
           <h1 className={styles.title}>Bonus Calculator</h1>
           <p className={styles.description}>

@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
@@ -7,10 +6,10 @@ import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
 import LoanPieChart from '@/components/charts/LoanPieChart';
 import Breadcrumb from '@/components/ui/Breadcrumb';
+import { BREADCRUMBS } from '@/lib/breadcrumbs';
 import { calculateEMI } from '@/lib/calculators';
 import { formatCurrency, formatTenure } from '@/lib/constants';
-
-import styles from './emi-page.module.css';
+import styles from './emi-page.module.css';                // ← kept as-is (matches your file)
 
 const DEBOUNCE_MS = 300;
 
@@ -55,13 +54,11 @@ export default function EMICalculator() {
     if (!schedule || schedule.length === 0) return [];
     const years = [];
     let yearData = { year: 1, emiPaid: 0, principalPaid: 0, interestPaid: 0, balance: 0 };
-
     schedule.forEach((month, idx) => {
       yearData.emiPaid       += month.emi;
       yearData.principalPaid += month.principal;
       yearData.interestPaid  += month.interest;
       yearData.balance        = month.balance;
-
       if ((idx + 1) % 12 === 0 || idx === schedule.length - 1) {
         years.push({ ...yearData });
         yearData = { year: yearData.year + 1, emiPaid: 0, principalPaid: 0, interestPaid: 0, balance: 0 };
@@ -77,11 +74,9 @@ export default function EMICalculator() {
     <div className={styles.page}>
       <div className={styles.container}>
 
-        {/* ── BREADCRUMB ──────────────────────────────────── */}
-        <Breadcrumb items={[
-          { label: 'Calculators', href: '/calculators' },
-          { label: 'EMI Calculator' },
-        ]} />
+        {/* ── BREADCRUMB ─────────────────────────────────── */}
+        {/* FIX: use BREADCRUMBS.emi from central config, not hardcoded inline */}
+        <Breadcrumb items={BREADCRUMBS.emi} />
 
         {/* ── HEADER ─────────────────────────────────────── */}
         <div className={styles.header}>
@@ -172,7 +167,6 @@ export default function EMICalculator() {
                       <div className={styles.summaryValue}>{formatTenure(result.tenureMonths)}</div>
                     </div>
                   </div>
-
                   <LoanPieChart principal={result.principal} interest={result.totalInterest} />
                 </Card>
               </>
@@ -196,7 +190,6 @@ export default function EMICalculator() {
               <Button variant={amortView === 'yearly'  ? 'primary' : 'secondary'} size="sm" onClick={() => setAmortView('yearly')}>Yearly</Button>
               <Button variant={amortView === 'monthly' ? 'primary' : 'secondary'} size="sm" onClick={() => setAmortView('monthly')}>Monthly</Button>
             </div>
-
             <div className={styles.tableWrapper}>
               <table className={styles.amortTable}>
                 <thead>
@@ -268,4 +261,5 @@ export default function EMICalculator() {
       </div>
     </div>
   );
+  
 }

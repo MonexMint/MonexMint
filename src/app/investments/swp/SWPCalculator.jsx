@@ -7,9 +7,6 @@ import AdSlot from '@/components/ads/AdSlot';
 import { calculateSWP } from '@/lib/calculators';
 import { formatCurrency, formatShortCurrency, formatTenure } from '@/lib/constants';
 import styles from './page.module.css';
-
-const DEBOUNCE_MS = 300;
-
 import {
   AreaChart,
   Area,
@@ -21,6 +18,11 @@ import {
   ResponsiveContainer,
   ReferenceLine,
 } from 'recharts';
+import Breadcrumb from '@/components/ui/Breadcrumb';
+import { BREADCRUMBS } from '@/lib/breadcrumbs';
+
+const DEBOUNCE_MS = 300;
+
 
 function CorpusAreaChart({ chartData, depletionMonth }) {
   const CustomTooltip = ({ active, payload, label }) => {
@@ -167,6 +169,8 @@ export default function SWPCalculator() {
   return (
     <div className={styles.page}>
       <div className={styles.container}>
+
+        <Breadcrumb items={BREADCRUMBS.swp} />
 
         {/* ── HEADER ─────────────────────────────────────── */}
         <div className={styles.header}>

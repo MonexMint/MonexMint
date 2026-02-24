@@ -7,9 +7,6 @@ import AdSlot from '@/components/ads/AdSlot';
 import { calculateCAGR, calculateLumpsum } from '@/lib/calculators';
 import { formatCurrency, formatShortCurrency } from '@/lib/constants';
 import styles from './page.module.css';
-
-const DEBOUNCE_MS = 300;
-
 import {
   LineChart,
   Line,
@@ -21,6 +18,10 @@ import {
   ResponsiveContainer,
   ReferenceDot,
 } from 'recharts';
+import Breadcrumb from '@/components/ui/Breadcrumb';
+import { BREADCRUMBS } from '@/lib/breadcrumbs';
+
+const DEBOUNCE_MS = 300;
 
 function GrowthLineChart({ startValue, endValue, tenureYears, cagr }) {
   // Build year-by-year projection
@@ -214,6 +215,8 @@ export default function CAGRCalculator() {
     <div className={styles.page}>
       <div className={styles.container}>
 
+        <Breadcrumb items={BREADCRUMBS.cagr} />
+        
         {/* ── HEADER ─────────────────────────────────────── */}
         <div className={styles.header}>
           <h1 className={styles.title}>CAGR Calculator</h1>

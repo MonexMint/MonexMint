@@ -1,75 +1,75 @@
 /**
- * MONEX MINT — Central Breadcrumb Config
- * 
- * Usage in any calculator client component:
- *   import { BREADCRUMBS } from '@/lib/breadcrumbs';
- *   <Breadcrumb items={BREADCRUMBS.emi} />
+ * MONEX MINT — Breadcrumb Config
+ *
+ * RULE: Last item must have NO href — it renders as <span> (current page)
+ * All other items must have href — they render as <a> links
+ *
+ * Breadcrumb component checks: crumb.href ? <a> : <span>
+ * This makes server/client output identical = no hydration errors
  */
-
-const CALC = { label: 'Calculators', href: '/calculators' };
 
 export const BREADCRUMBS = {
 
-  // ── LOAN CALCULATORS ──────────────────────────────────────
-  emi:             [CALC, { label: 'Loan Calculators', href: '/calculators' }, { label: 'EMI Calculator' }],
-  homeLoan:        [CALC, { label: 'Loan Calculators', href: '/calculators' }, { label: 'Home Loan' }],
-  carLoan:         [CALC, { label: 'Loan Calculators', href: '/calculators' }, { label: 'Car Loan' }],
-  personalLoan:    [CALC, { label: 'Loan Calculators', href: '/calculators' }, { label: 'Personal Loan' }],
-  loanEligibility: [CALC, { label: 'Loan Calculators', href: '/calculators' }, { label: 'Loan Eligibility' }],
-  prepayment:      [CALC, { label: 'Loan Calculators', href: '/calculators' }, { label: 'Prepayment Calculator' }],
-  flatVsReducing:  [CALC, { label: 'Loan Calculators', href: '/calculators' }, { label: 'Flat vs Reducing Rate' }],
-  loanTenure:      [CALC, { label: 'Loan Calculators', href: '/calculators' }, { label: 'Loan Tenure Calculator' }],
-  balanceTransfer: [CALC, { label: 'Loan Calculators', href: '/calculators' }, { label: 'Balance Transfer' }],
+  // ── LOAN CALCULATORS ─────────────────────────────────────
+  emi:             [{ label: 'Calculators', href: '/calculators' }, { label: 'EMI Calculator' }],
+  homeLoan:        [{ label: 'Calculators', href: '/calculators' }, { label: 'Home Loan' }],
+  carLoan:         [{ label: 'Calculators', href: '/calculators' }, { label: 'Car Loan' }],
+  personalLoan:    [{ label: 'Calculators', href: '/calculators' }, { label: 'Personal Loan' }],
+  loanEligibility: [{ label: 'Calculators', href: '/calculators' }, { label: 'Loan Eligibility' }],
+  prepayment:      [{ label: 'Calculators', href: '/calculators' }, { label: 'Prepayment Calculator' }],
+  flatVsReducing:  [{ label: 'Calculators', href: '/calculators' }, { label: 'Flat vs Reducing Rate' }],
+  loanTenure:      [{ label: 'Calculators', href: '/calculators' }, { label: 'Loan Tenure Calculator' }],
+  balanceTransfer: [{ label: 'Calculators', href: '/calculators' }, { label: 'Balance Transfer' }],
 
   // ── INVESTMENT CALCULATORS ────────────────────────────────
-  sip:             [CALC, { label: 'Investment & Wealth', href: '/calculators' }, { label: 'SIP Calculator' }],
-  stepUpSip:       [CALC, { label: 'Investment & Wealth', href: '/calculators' }, { label: 'Step-Up SIP Calculator' }],
-  lumpsum:         [CALC, { label: 'Investment & Wealth', href: '/calculators' }, { label: 'Lumpsum Calculator' }],
-  swp:             [CALC, { label: 'Investment & Wealth', href: '/calculators' }, { label: 'SWP Calculator' }],
-  cagr:            [CALC, { label: 'Investment & Wealth', href: '/calculators' }, { label: 'CAGR Calculator' }],
-  compoundInterest:[CALC, { label: 'Investment & Wealth', href: '/calculators' }, { label: 'Compound Interest' }],
-  stockAverage:    [CALC, { label: 'Investment & Wealth', href: '/calculators' }, { label: 'Stock Average Calculator' }],
-  xirr:            [CALC, { label: 'Investment & Wealth', href: '/calculators' }, { label: 'XIRR Calculator' }],
-  goalPlanning:    [CALC, { label: 'Investment & Wealth', href: '/calculators' }, { label: 'Goal Planning' }],
-  mutualFund:      [CALC, { label: 'Investment & Wealth', href: '/calculators' }, { label: 'Mutual Fund Returns' }],
-  riskReturn:      [CALC, { label: 'Investment & Wealth', href: '/calculators' }, { label: 'Risk vs Return' }],
+  sip:             [{ label: 'Calculators', href: '/calculators' }, { label: 'SIP Calculator' }],
+  stepUpSip:       [{ label: 'Calculators', href: '/calculators' }, { label: 'Step-Up SIP Calculator' }],
+  lumpsum:         [{ label: 'Calculators', href: '/calculators' }, { label: 'Lumpsum Calculator' }],
+  swp:             [{ label: 'Calculators', href: '/calculators' }, { label: 'SWP Calculator' }],
+  cagr:            [{ label: 'Calculators', href: '/calculators' }, { label: 'CAGR Calculator' }],
+  compoundInterest:[{ label: 'Calculators', href: '/calculators' }, { label: 'Compound Interest' }],
+  stockAverage:    [{ label: 'Calculators', href: '/calculators' }, { label: 'Stock Average Calculator' }],
+  xirr:            [{ label: 'Calculators', href: '/calculators' }, { label: 'XIRR Calculator' }],
+  goalPlanning:    [{ label: 'Calculators', href: '/calculators' }, { label: 'Goal Planning' }],
+  mutualFund:      [{ label: 'Calculators', href: '/calculators' }, { label: 'Mutual Fund Returns' }],
+  riskReturn:      [{ label: 'Calculators', href: '/calculators' }, { label: 'Risk vs Return' }],
 
   // ── GOVERNMENT SAVINGS ────────────────────────────────────
-  ppf:             [CALC, { label: 'Government Savings', href: '/calculators' }, { label: 'PPF Calculator' }],
-  epf:             [CALC, { label: 'Government Savings', href: '/calculators' }, { label: 'EPF Calculator' }],
-  nps:             [CALC, { label: 'Government Savings', href: '/calculators' }, { label: 'NPS Calculator' }],
-  ssy:             [CALC, { label: 'Government Savings', href: '/calculators' }, { label: 'Sukanya Samriddhi (SSY)' }],
-  apy:             [CALC, { label: 'Government Savings', href: '/calculators' }, { label: 'Atal Pension (APY)' }],
-  nsc:             [CALC, { label: 'Government Savings', href: '/calculators' }, { label: 'NSC Calculator' }],
-  kvp:             [CALC, { label: 'Government Savings', href: '/calculators' }, { label: 'KVP Calculator' }],
-  scss:            [CALC, { label: 'Government Savings', href: '/calculators' }, { label: 'SCSS Calculator' }],
-  postOfficeMis:   [CALC, { label: 'Government Savings', href: '/calculators' }, { label: 'Post Office MIS' }],
+  ppf:             [{ label: 'Calculators', href: '/calculators' }, { label: 'PPF Calculator' }],
+  epf:             [{ label: 'Calculators', href: '/calculators' }, { label: 'EPF Calculator' }],
+  nps:             [{ label: 'Calculators', href: '/calculators' }, { label: 'NPS Calculator' }],
+  ssy:             [{ label: 'Calculators', href: '/calculators' }, { label: 'Sukanya Samriddhi (SSY)' }],
+  apy:             [{ label: 'Calculators', href: '/calculators' }, { label: 'Atal Pension (APY)' }],
+  nsc:             [{ label: 'Calculators', href: '/calculators' }, { label: 'NSC Calculator' }],
+  kvp:             [{ label: 'Calculators', href: '/calculators' }, { label: 'KVP Calculator' }],
+  scss:            [{ label: 'Calculators', href: '/calculators' }, { label: 'SCSS Calculator' }],
+  postOfficeMis:   [{ label: 'Calculators', href: '/calculators' }, { label: 'Post Office MIS' }],
 
   // ── BANKING ───────────────────────────────────────────────
-  fd:              [CALC, { label: 'Banking & Deposits', href: '/calculators' }, { label: 'FD Calculator' }],
-  rd:              [CALC, { label: 'Banking & Deposits', href: '/calculators' }, { label: 'RD Calculator' }],
-  savingsInterest: [CALC, { label: 'Banking & Deposits', href: '/calculators' }, { label: 'Savings Interest' }],
-  overdraft:       [CALC, { label: 'Banking & Deposits', href: '/calculators' }, { label: 'Overdraft Calculator' }],
-  creditCard:      [CALC, { label: 'Banking & Deposits', href: '/calculators' }, { label: 'Credit Card Interest' }],
+  fd:              [{ label: 'Calculators', href: '/calculators' }, { label: 'FD Calculator' }],
+  rd:              [{ label: 'Calculators', href: '/calculators' }, { label: 'RD Calculator' }],
+  savingsInterest: [{ label: 'Calculators', href: '/calculators' }, { label: 'Savings Interest' }],
+  overdraft:       [{ label: 'Calculators', href: '/calculators' }, { label: 'Overdraft Calculator' }],
+  creditCard:      [{ label: 'Calculators', href: '/calculators' }, { label: 'Credit Card Interest' }],
 
   // ── SALARY & TAX ──────────────────────────────────────────
-  incomeTax:       [CALC, { label: 'Salary & Tax', href: '/calculators' }, { label: 'Income Tax Calculator' }],
-  salary:          [CALC, { label: 'Salary & Tax', href: '/calculators' }, { label: 'Salary Calculator' }],
-  takeHome:        [CALC, { label: 'Salary & Tax', href: '/calculators' }, { label: 'Take Home Salary' }],
-  hra:             [CALC, { label: 'Salary & Tax', href: '/calculators' }, { label: 'HRA Calculator' }],
-  gratuity:        [CALC, { label: 'Salary & Tax', href: '/calculators' }, { label: 'Gratuity Calculator' }],
-  tds:             [CALC, { label: 'Salary & Tax', href: '/calculators' }, { label: 'TDS Calculator' }],
-  bonus:           [CALC, { label: 'Salary & Tax', href: '/calculators' }, { label: 'Bonus Calculator' }],
+  incomeTax:       [{ label: 'Calculators', href: '/calculators' }, { label: 'Income Tax Calculator' }],
+  salary:          [{ label: 'Calculators', href: '/calculators' }, { label: 'Salary Calculator' }],
+  takeHome:        [{ label: 'Calculators', href: '/calculators' }, { label: 'Take Home Salary' }],
+  hra:             [{ label: 'Calculators', href: '/calculators' }, { label: 'HRA Calculator' }],
+  gratuity:        [{ label: 'Calculators', href: '/calculators' }, { label: 'Gratuity Calculator' }],
+  tds:             [{ label: 'Calculators', href: '/calculators' }, { label: 'TDS Calculator' }],
+  bonus:           [{ label: 'Calculators', href: '/calculators' }, { label: 'Bonus Calculator' }],
 
   // ── BUSINESS TAX ──────────────────────────────────────────
-  gst:             [CALC, { label: 'Tax & Business', href: '/calculators' }, { label: 'GST Calculator' }],
-  brokerage:       [CALC, { label: 'Tax & Business', href: '/calculators' }, { label: 'Brokerage Calculator' }],
-  capitalGains:    [CALC, { label: 'Tax & Business', href: '/calculators' }, { label: 'Capital Gains Tax' }],
-  stampDuty:       [CALC, { label: 'Tax & Business', href: '/calculators' }, { label: 'Stamp Duty Calculator' }],
-  professionalTax: [CALC, { label: 'Tax & Business', href: '/calculators' }, { label: 'Professional Tax' }],
+  gst:             [{ label: 'Calculators', href: '/calculators' }, { label: 'GST Calculator' }],
+  brokerage:       [{ label: 'Calculators', href: '/calculators' }, { label: 'Brokerage Calculator' }],
+  capitalGains:    [{ label: 'Calculators', href: '/calculators' }, { label: 'Capital Gains Tax' }],
+  stampDuty:       [{ label: 'Calculators', href: '/calculators' }, { label: 'Stamp Duty Calculator' }],
+  professionalTax: [{ label: 'Calculators', href: '/calculators' }, { label: 'Professional Tax' }],
 
   // ── INFLATION & VALUE ─────────────────────────────────────
-  inflation:       [CALC, { label: 'Inflation & Value', href: '/calculators' }, { label: 'Inflation Calculator' }],
-  realRate:        [CALC, { label: 'Inflation & Value', href: '/calculators' }, { label: 'Real Rate of Return' }],
-  futureValue:     [CALC, { label: 'Inflation & Value', href: '/calculators' }, { label: 'Future Value Calculator' }],
+  inflation:       [{ label: 'Calculators', href: '/calculators' }, { label: 'Inflation Calculator' }],
+  realRate:        [{ label: 'Calculators', href: '/calculators' }, { label: 'Real Rate of Return' }],
+  futureValue:     [{ label: 'Calculators', href: '/calculators' }, { label: 'Future Value Calculator' }],
 };

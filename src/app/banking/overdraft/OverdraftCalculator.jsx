@@ -8,6 +8,8 @@ import AdSlot from '@/components/ads/AdSlot';
 import { calculateOverdraftInterest } from '@/lib/calculators';
 import { formatCurrency } from '@/lib/constants';
 import styles from './page.module.css';
+import Breadcrumb from '@/components/ui/Breadcrumb';
+import { BREADCRUMBS } from '@/lib/breadcrumbs';
 
 const DEBOUNCE_MS = 300;
 
@@ -55,6 +57,8 @@ export default function OverdraftCalculator() {
     <div className={styles.page}>
       <div className={styles.container}>
 
+        <Breadcrumb items={BREADCRUMBS.overdraft} />
+        
         <div className={styles.header}>
           <h1 className={styles.title}>Overdraft Interest Calculator</h1>
           <p className={styles.description}>

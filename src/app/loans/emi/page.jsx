@@ -1,26 +1,19 @@
-// ─────────────────────────────────────────────────────────────
-// app/loans/emi/page.jsx  →  SERVER COMPONENT (no 'use client')
-// Rule: metadata export ONLY works in Server Components
-// This file ONLY does: SEO metadata + JSON-LD + renders client component
-// ─────────────────────────────────────────────────────────────
+// src/app/loans/emi/page.jsx — SERVER COMPONENT (no 'use client')
 
 import EMICalculator from './EMICalculator';
 
-// ─── SEO Metadata ─────────────────────────────────────────────
 export const metadata = {
-  title: 'EMI Calculator | MonexMint',
+  title: 'EMI Calculator',        // FIX: removed trailing space after 'Calculator '
   description:
     'Calculate your loan EMI instantly. Free EMI calculator for home, car & personal loans with full amortisation schedule.',
   keywords: 'EMI calculator, loan EMI, monthly installment calculator, India',
   openGraph: {
-    title: 'EMI Calculator | MonexMint',
-    description:
-      'Calculate your loan EMI instantly. Free EMI calculator for home, car & personal loans.',
+    title: 'EMI Calculator | MONEX MINT',
+    description: 'Calculate your loan EMI instantly. Free EMI calculator for home, car & personal loans.',
     type: 'website',
   },
 };
 
-// ─── JSON-LD Schema ───────────────────────────────────────────
 const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
@@ -32,7 +25,6 @@ const SCHEMA = {
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
 };
 
-// ─── Page (Server Component) ───────────────────────────────────
 export default function EMIPage() {
   return (
     <>

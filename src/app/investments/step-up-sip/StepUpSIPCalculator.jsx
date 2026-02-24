@@ -8,6 +8,8 @@ import AdSlot from '@/components/ads/AdSlot';
 import { calculateStepUpSIP } from '@/lib/calculators';
 import { formatCurrency } from '@/lib/constants';
 import styles from './page.module.css';
+import Breadcrumb from '@/components/ui/Breadcrumb';
+import { BREADCRUMBS } from '@/lib/breadcrumbs';
 
 const DEBOUNCE_MS = 200;
 
@@ -104,6 +106,8 @@ export default function StepUpSIPCalculator() {
   return (
     <div className={styles.page}>
       <div className={styles.container}>
+
+        <Breadcrumb items={BREADCRUMBS.stepUpSip} />
 
         {/* ── HEADER ─────────────────────────────────────── */}
         <div className={styles.header}>

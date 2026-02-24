@@ -7,9 +7,9 @@ import AdSlot from '@/components/ads/AdSlot';
 import { calculateBalanceTransfer } from '@/lib/calculators';
 import { formatCurrency, formatTenure } from '@/lib/constants';
 
+import styles from './page.module.css';
 import Breadcrumb from '@/components/ui/Breadcrumb';
 import { BREADCRUMBS } from '@/lib/breadcrumbs';
-import styles from './page.module.css';
 
 const DEBOUNCE_MS = 300;
 
@@ -72,6 +72,8 @@ export default function BalanceTransferCalculator() {
   return (
     <div className={styles.page}>
       <div className={styles.container}>
+
+        <Breadcrumb items={BREADCRUMBS.balanceTransfer} />
 
         {/* ── HEADER ─────────────────────────────────────── */}
         <div className={styles.header}>

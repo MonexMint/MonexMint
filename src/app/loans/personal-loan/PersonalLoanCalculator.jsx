@@ -9,6 +9,8 @@ import AdSlot from '@/components/ads/AdSlot';
 import { calculatePersonalLoanEMI } from '@/lib/calculators';
 import { formatCurrency, formatTenure } from '@/lib/constants';
 import styles from './page.module.css';
+import Breadcrumb from '@/components/ui/Breadcrumb';
+import { BREADCRUMBS } from '@/lib/breadcrumbs';
 
 const DEBOUNCE_MS = 300;
 
@@ -98,6 +100,8 @@ export default function PersonalLoanCalculator() {
   return (
     <div className={styles.page}>
       <div className={styles.container}>
+
+        <Breadcrumb items={BREADCRUMBS.personalLoan} />
 
         {/* ── HEADER ─────────────────────────────────────── */}
         <div className={styles.header}>

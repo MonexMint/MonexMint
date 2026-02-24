@@ -8,7 +8,6 @@ import { calculateLumpsum } from '@/lib/calculators';
 import { formatCurrency, formatShortCurrency } from '@/lib/constants';
 import styles from './page.module.css';
 
-const DEBOUNCE_MS = 300;
 
 // ── Inline Pie Chart (no external dependency beyond recharts) ──────────────
 import {
@@ -19,6 +18,12 @@ import {
   Tooltip,
   Legend,
 } from 'recharts';
+import Breadcrumb from '@/components/ui/Breadcrumb';
+import { BREADCRUMBS } from '@/lib/breadcrumbs';
+
+const DEBOUNCE_MS = 300;
+
+
 
 function InvestmentPieChart({ invested, returns }) {
   const data = [
@@ -184,6 +189,8 @@ export default function LumpsumCalculator() {
   return (
     <div className={styles.page}>
       <div className={styles.container}>
+
+        <Breadcrumb items={BREADCRUMBS.lumpsum} />
 
         {/* ── HEADER ─────────────────────────────────────── */}
         <div className={styles.header}>

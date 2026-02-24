@@ -8,6 +8,8 @@ import AdSlot from '@/components/ads/AdSlot';
 import { calculateStockAverage } from '@/lib/calculators';
 import { formatCurrency } from '@/lib/constants';
 import styles from './page.module.css';
+import Breadcrumb from '@/components/ui/Breadcrumb';
+import { BREADCRUMBS } from '@/lib/breadcrumbs';
 
 export default function StockAverageCalculator() {
 
@@ -42,6 +44,8 @@ export default function StockAverageCalculator() {
   return (
     <div className={styles.page}>
       <div className={styles.container}>
+
+        <Breadcrumb items={BREADCRUMBS.stockAverage} />
 
         <div className={styles.header}>
           <h1 className={styles.title}>Stock Average Calculator</h1>

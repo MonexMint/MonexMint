@@ -8,6 +8,8 @@ import LoanPieChart from '@/components/charts/LoanPieChart';
 import { calculateLoanTenure } from '@/lib/calculators';
 import { formatCurrency, formatTenure } from '@/lib/constants';
 import styles from './page.module.css';
+import Breadcrumb from '@/components/ui/Breadcrumb';
+import { BREADCRUMBS } from '@/lib/breadcrumbs';
 
 const DEBOUNCE_MS = 300;
 
@@ -74,6 +76,8 @@ export default function LoanTenureCalculator() {
     <div className={styles.page}>
       <div className={styles.container}>
 
+          <Breadcrumb items={BREADCRUMBS.loanTenure} />
+          
         {/* ── HEADER ─────────────────────────────────────── */}
         <div className={styles.header}>
           <h1 className={styles.title}>Loan Tenure Calculator</h1>

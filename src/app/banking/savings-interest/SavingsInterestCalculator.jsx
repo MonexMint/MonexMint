@@ -8,6 +8,8 @@ import AdSlot from '@/components/ads/AdSlot';
 import { calculateSavingsAccountInterest } from '@/lib/calculators';
 import { formatCurrency } from '@/lib/constants';
 import styles from './page.module.css';
+import Breadcrumb from '@/components/ui/Breadcrumb';
+import { BREADCRUMBS } from '@/lib/breadcrumbs';
 
 const DEBOUNCE_MS = 300;
 
@@ -53,6 +55,8 @@ export default function SavingsInterestCalculator() {
     <div className={styles.page}>
       <div className={styles.container}>
 
+        <Breadcrumb items={BREADCRUMBS.savingsInterest} />
+        
         <div className={styles.header}>
           <h1 className={styles.title}>Savings Account Interest Calculator</h1>
           <p className={styles.description}>

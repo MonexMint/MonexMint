@@ -8,6 +8,8 @@ import AdSlot from '@/components/ads/AdSlot';
 import { calculateEPF } from '@/lib/calculators';
 import { formatCurrency } from '@/lib/constants';
 import styles from './page.module.css';
+import Breadcrumb from '@/components/ui/Breadcrumb';
+import { BREADCRUMBS } from '@/lib/breadcrumbs';
 
 const DEBOUNCE_MS = 300;
 
@@ -57,6 +59,8 @@ export default function EPFCalculator() {
     <div className={styles.page}>
       <div className={styles.container}>
 
+        <Breadcrumb items={BREADCRUMBS.epf} />
+        
         <div className={styles.header}>
           <h1 className={styles.title}>EPF Calculator</h1>
           <p className={styles.description}>

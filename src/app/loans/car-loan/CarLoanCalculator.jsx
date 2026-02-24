@@ -8,9 +8,9 @@ import LoanPieChart from '@/components/charts/LoanPieChart';
 import AdSlot from '@/components/ads/AdSlot';
 import { calculateCarLoanEMI } from '@/lib/calculators';
 import { formatCurrency, formatTenure } from '@/lib/constants';
+import styles from './page.module.css';
 import Breadcrumb from '@/components/ui/Breadcrumb';
 import { BREADCRUMBS } from '@/lib/breadcrumbs';
-import styles from './page.module.css';
 
 const DEBOUNCE_MS = 300;
 
