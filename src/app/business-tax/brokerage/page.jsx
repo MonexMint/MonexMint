@@ -1,4 +1,4 @@
-import BrokerageCalculator from './BrokerageCalculator';
+import BrokerageCalculator from './brokeragecalculator';
 
 export const metadata = {
   title: 'Brokerage Calculator - Trading Charges & Net P&L | My Wealth Circle',
