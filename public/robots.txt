@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-#Sitemap: https://monexmint.com/sitemap.xml
+Sitemap: https://www.monexmint.com/sitemap.xml

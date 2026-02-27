@@ -7,6 +7,9 @@ export const metadata = {
   description:
     'Calculate your loan EMI instantly. Free EMI calculator for home, car & personal loans with full amortisation schedule.',
   keywords: 'EMI calculator, loan EMI, monthly installment calculator, India',
+  alternates: {
+    canonical: '/loans/emi',
+  },
   openGraph: {
     title: 'EMI Calculator | MONEX MINT',
     description: 'Calculate your loan EMI instantly. Free EMI calculator for home, car & personal loans.',
@@ -18,7 +21,7 @@ const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
   name: 'EMI Calculator',
-  url: 'https://monexmint.com/loans/emi',
+  url: 'https://www.monexmint.com/loans/emi',
   description: 'Free EMI calculator for home, car and personal loans.',
   applicationCategory: 'FinanceApplication',
   operatingSystem: 'All',

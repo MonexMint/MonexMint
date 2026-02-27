@@ -4,13 +4,17 @@ import { ThemeProvider } from '@/context/ThemeContext';
 import '@/styles/globals.css';
 
 export const metadata = {
+   alternates: {
+    canonical: '/',
+  },
+
   /*
     metadataBase: Fixes the Next.js console warning:
     "metadataBase property in metadata export is not set"
     Without this, OG/Twitter image URLs can't be resolved in dev.
   */
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://monexmint.com'
+    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.monexmint.com'
   ),
 
   title: {
@@ -31,7 +35,7 @@ export const metadata = {
   openGraph: {
     title:       'MONEX MINT - Smart Financial Calculators',
     description: 'Free financial calculators for EMI, SIP, tax, FD and more.',
-    url:         'https://monexmint.com',
+    url:         'https://www.monexmint.com',
     siteName:    'MONEX MINT',
     type:        'website',
     images: [{ url: '/logoMM.png', width: 512, height: 512, alt: 'MONEX MINT Logo' }],

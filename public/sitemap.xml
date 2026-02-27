@@ -3,86 +3,86 @@
 
   <!-- Home -->
   <url>
-    <loc>https://monexmint.com/</loc>
+    <loc>https://www.monexmint.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- All Calculators -->
   <url>
-    <loc>https://monexmint.com/calculators</loc>
+     <loc>https://www.monexmint.com/calculators</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Loan Calculators -->
-  <url><loc>https://monexmint.com/loans/emi</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://monexmint.com/loans/home-loan</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://monexmint.com/loans/car-loan</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://monexmint.com/loans/personal-loan</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://monexmint.com/loans/eligibility</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://monexmint.com/loans/prepayment</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://monexmint.com/loans/flat-vs-reducing</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://monexmint.com/loans/tenure</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://monexmint.com/loans/balance-transfer</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/loans/emi</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.monexmint.com/loans/home-loan</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.monexmint.com/loans/car-loan</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.monexmint.com/loans/personal-loan</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.monexmint.com/loans/eligibility</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.monexmint.com/loans/prepayment</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.monexmint.com/loans/flat-vs-reducing</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/loans/tenure</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/loans/balance-transfer</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <!-- Investment Calculators -->
-  <url><loc>https://monexmint.com/investments/sip</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://monexmint.com/investments/step-up-sip</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://monexmint.com/investments/lumpsum</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://monexmint.com/investments/swp</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://monexmint.com/investments/cagr</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://monexmint.com/investments/compound-interest</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://monexmint.com/investments/stock-average</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://monexmint.com/investments/xirr</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://monexmint.com/investments/goal-planning</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://monexmint.com/investments/mutual-fund-returns</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://monexmint.com/investments/risk-return</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/investments/sip</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.monexmint.com/investments/step-up-sip</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.monexmint.com/investments/lumpsum</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.monexmint.com/investments/swp</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.monexmint.com/investments/cagr</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.monexmint.com/investments/compound-interest</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.monexmint.com/investments/stock-average</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/investments/xirr</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/investments/goal-planning</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.monexmint.com/investments/mutual-fund-returns</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/investments/risk-return</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <!-- Government Savings -->
-  <url><loc>https://monexmint.com/government/ppf</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://monexmint.com/government/epf</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://monexmint.com/government/nps</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://monexmint.com/government/ssy</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://monexmint.com/government/apy</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://monexmint.com/government/nsc</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://monexmint.com/government/kvp</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://monexmint.com/government/scss</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://monexmint.com/government/post-office-mis</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/government/ppf</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.monexmint.com/government/epf</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.monexmint.com/government/nps</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.monexmint.com/government/ssy</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/government/apy</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/government/nsc</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/government/kvp</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/government/scss</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/government/post-office-mis</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <!-- Banking -->
-  <url><loc>https://monexmint.com/banking/fd</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://monexmint.com/banking/rd</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://monexmint.com/banking/savings-interest</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://monexmint.com/banking/overdraft</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://monexmint.com/banking/credit-card-interest</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/banking/fd</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.monexmint.com/banking/rd</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.monexmint.com/banking/savings-interest</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/banking/overdraft</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/banking/credit-card-interest</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <!-- Salary & Tax -->
-  <url><loc>https://monexmint.com/salary-tax/income-tax</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://monexmint.com/salary-tax/salary</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://monexmint.com/salary-tax/take-home</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://monexmint.com/salary-tax/hra</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://monexmint.com/salary-tax/gratuity</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://monexmint.com/salary-tax/tds</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://monexmint.com/salary-tax/bonus</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/salary-tax/income-tax</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.monexmint.com/salary-tax/salary</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.monexmint.com/salary-tax/take-home</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.monexmint.com/salary-tax/hra</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.monexmint.com/salary-tax/gratuity</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/salary-tax/tds</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.monexmint.com/salary-tax/bonus</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <!-- Business Tax -->
-  <url><loc>https://monexmint.com/business-tax/gst</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://monexmint.com/business-tax/brokerage</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://monexmint.com/business-tax/capital-gains</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://monexmint.com/business-tax/stamp-duty</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://monexmint.com/business-tax/professional-tax</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+   <url><loc>https://www.monexmint.com/business-tax/gst</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.monexmint.com/business-tax/brokerage</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/business-tax/capital-gains</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.monexmint.com/business-tax/stamp-duty</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/business-tax/professional-tax</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <!-- Value Tools -->
-  <url><loc>https://monexmint.com/value-tools/inflation</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://monexmint.com/value-tools/real-rate</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://monexmint.com/value-tools/future-value</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/value-tools/inflation</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/value-tools/real-rate</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/value-tools/future-value</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <!-- Company Pages -->
-  <url><loc>https://monexmint.com/about</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://monexmint.com/blog</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://monexmint.com/privacy-policy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://monexmint.com/terms-of-use</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://monexmint.com/disclaimer</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.monexmint.com/about</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.monexmint.com/blog</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.monexmint.com/privacy-policy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.monexmint.com/terms-of-use</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.monexmint.com/disclaimer</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 
 </urlset>

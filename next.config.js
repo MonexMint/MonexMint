@@ -31,6 +31,19 @@ const nextConfig = {
     optimisticClientCache: true,
   },
 
+
+
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'monexmint.com' }],
+        destination: 'https://www.monexmint.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
+
   // ── Headers: security + cache ─────────────────────────
   async headers() {
     return [
