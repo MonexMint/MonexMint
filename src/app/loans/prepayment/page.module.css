@@ -38,14 +38,18 @@
 /* ── Content Grid ─────────────────────────────────────────── */
 .content {
   display: grid;
-  grid-template-columns: 380px 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 2rem;
   align-items: start;
 }
 
-@media (max-width: 768px) {
+.content > * {
+  min-width: 0;
+}
+
+@media (min-width: 769px) {
   .content {
-    grid-template-columns: 1fr;
+    grid-template-columns: 380px minmax(0, 1fr);
   }
 }
 
