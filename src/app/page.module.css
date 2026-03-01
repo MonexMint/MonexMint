@@ -7,7 +7,7 @@
 
 /* ── HERO ────────────────────────────────────── */
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - 64px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,6 +20,32 @@
     #070b18;
 }
 
+
+
+[data-theme="light"] .hero {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(13,148,136,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 60%, rgba(37,99,235,0.14) 0%, transparent 60%),
+    #f8fbff;
+}
+
+[data-theme="light"] .hero::before {
+  background-image:
+    linear-gradient(rgba(15,23,42,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15,23,42,0.04) 1px, transparent 1px);
+}
+
+[data-theme="light"] .heroTitle { color: #0f172a; }
+[data-theme="light"] .heroSub { color: #334155; }
+[data-theme="light"] .btnGhost {
+  border-color: rgba(15,23,42,0.2);
+  color: #1e293b;
+}
+[data-theme="light"] .btnGhost:hover {
+  border-color: rgba(15,23,42,0.4);
+  color: #0f172a;
+  background: rgba(15,23,42,0.06);
+}
 /* Subtle grid overlay */
 .hero::before {
   content: '';
@@ -304,3 +330,25 @@
   .heroCta { flex-direction: column; align-items: center; }
   .btnPrimary, .btnGhost { width: 100%; text-align: center; }
 }
+
+[data-theme="light"] .dark { background: var(--bg-primary); }
+[data-theme="light"] .sHLight { color: var(--text-primary); }
+[data-theme="light"] .sPLight { color: var(--text-secondary); }
+[data-theme="light"] .catCard {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+}
+[data-theme="light"] .catName { color: var(--text-primary); }
+[data-theme="light"] .catCount { color: var(--text-secondary); }
+[data-theme="light"] .catArrow { color: var(--text-tertiary); }
+[data-theme="light"] .catAll {
+  border-color: var(--border-color);
+  color: var(--text-secondary);
+}
+[data-theme="light"] .statsStrip {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+[data-theme="light"] .stat { border-right: 1px solid var(--border-color); }
+[data-theme="light"] .statLbl { color: var(--text-secondary); }

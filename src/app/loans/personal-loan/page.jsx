@@ -1,35 +1,31 @@
-﻿// ─────────────────────────────────────────────────────────────
-// app/loans/personal-loan/page.jsx  →  SERVER COMPONENT
-// ─────────────────────────────────────────────────────────────
+﻿import PersonalLoanCalculator from './PersonalLoanCalculator';
 
-import PersonalLoanCalculator from './PersonalLoanCalculator';
-
-// ─── SEO Metadata ─────────────────────────────────────────────
 export const metadata = {
-  title: 'Personal Loan EMI Calculator | MonexMint',
+  title: 'Personal Loan EMI Calculator | MONEX MINT',
   description:
     'Calculate personal loan EMI with processing fee, effective APR, and full amortization schedule. Free unsecured loan calculator India.',
   keywords: 'personal loan EMI calculator, unsecured loan calculator, personal loan India, effective APR calculator',
+  alternates: {
+    canonical: '/loans/personal-loan',
+  },
   openGraph: {
-    title: 'Personal Loan EMI Calculator | MonexMint',
-    description: 'Calculate personal loan EMI with effective APR and amortization schedule.',
+    title: 'Personal Loan EMI Calculator | MONEX MINT',
+    description: 'Calculate personal loan EMI with processing fee, effective APR, and full amortization schedule. Free unsecured loan calculator India.',
     type: 'website',
   },
 };
 
-// ─── JSON-LD Schema ───────────────────────────────────────────
 const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
   name: 'Personal Loan EMI Calculator',
-  url: 'https://mywealthcircle.in/loans/personal-loan',
-  description: 'Calculate personal loan EMI with processing fee and effective APR.',
+  url: 'https://www.monexmint.com/loans/personal-loan',
+  description: 'Calculate personal loan EMI with processing feeCalculate personal loan EMI with processing fee, effective APR, and full amortization schedule. Free unsecured loan calculator India.',
   applicationCategory: 'FinanceApplication',
   operatingSystem: 'All',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
 };
 
-// ─── Page ─────────────────────────────────────────────────────
 export default function PersonalLoanPage() {
   return (
     <>

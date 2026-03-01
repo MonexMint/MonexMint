@@ -41,12 +41,8 @@ export default function Home() {
   return (
     <div className={styles.page}>
 
-      {/* ── HERO ─────────────────────────────────────────────
-          marginTop: '-64px' cancels layout.jsx padding-top
-          so this section goes full-screen behind the
-          transparent fixed header. This is intentional.
-      ─────────────────────────────────────────────────────── */}
-      <section className={styles.hero} style={{ marginTop: '-64px' }}>
+      {/* ── HERO ───────────────────────────────────────────── */}
+      <section className={styles.hero}>
         <div className={styles.heroInner}>
           <span className={styles.badge}>🇮🇳 Made for India · 100% Free · No Signup</span>
           <h1 className={styles.heroTitle}>

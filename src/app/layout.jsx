@@ -27,9 +27,28 @@ export const metadata = {
     'EMI calculator, SIP calculator, income tax calculator, FD calculator, GST calculator India',
 
   icons: {
-    icon:    [{ url: '/logoMM.png', type: 'image/png', sizes: 'any' }],
-    apple:   [{ url: '/logoMM.png', sizes: '180x180', type: 'image/png' }],
-    shortcut: '/logoMM.png',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+    shortcut: ['/favicon.ico'],
+  },
+  manifest: '/site.webmanifest',
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
   },
 
   openGraph: {
@@ -38,14 +57,14 @@ export const metadata = {
     url:         'https://www.monexmint.com',
     siteName:    'MONEX MINT',
     type:        'website',
-    images: [{ url: '/logoMM.png', width: 512, height: 512, alt: 'MONEX MINT Logo' }],
+    images: [{ url: '/web-app-manifest-512x512.png', width: 512, height: 512, alt: 'MONEX MINT Logo' }],
   },
 
   twitter: {
     card:        'summary',
     title:       'MONEX MINT - Smart Financial Calculators',
     description: 'Free financial calculators for EMI, SIP, tax, FD and more.',
-    images:      ['/logoMM.png'],
+    images:      ['/web-app-manifest-512x512.png'],
   },
 };
 
@@ -64,6 +83,17 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <ThemeProvider>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'WebSite',
+                name: 'MONEX MINT',
+                url: 'https://www.monexmint.com',
+              }),
+            }}
+          />
           <Header />
           {/*
             padding-top: 64px = header height

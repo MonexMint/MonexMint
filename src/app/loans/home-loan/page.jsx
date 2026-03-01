@@ -1,15 +1,16 @@
-// src/app/loans/home-loan/page.jsx — SERVER COMPONENT (no 'use client')
-
 import HomeLoanCalculator from './HomeLoanCalculator';
 
 export const metadata = {
-  title: 'Home Loan EMI Calculator',
+  title: 'Home Loan EMI Calculator | MONEX MINT',
   description:
     'Calculate home loan EMI with property value, down payment, LTV ratio and full amortization schedule. Free housing loan calculator India.',
   keywords: 'home loan EMI calculator, housing loan calculator, property loan EMI India, LTV calculator',
+  alternates: {
+    canonical: '/loans/home-loan',
+  },
   openGraph: {
     title: 'Home Loan EMI Calculator | MONEX MINT',
-    description: 'Calculate home loan EMI with down payment and amortization schedule.',
+    description: 'Calculate home loan EMI with property value, down payment, LTV ratio and full amortization schedule. Free housing loan calculator India.',
     type: 'website',
   },
 };
@@ -18,8 +19,8 @@ const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
   name: 'Home Loan EMI Calculator',
-  url: 'https://monexmint.com/loans/home-loan',
-  description: 'Calculate home loan EMI with property value and down payment.',
+  url: 'https://www.monexmint.com/loans/home-loan',
+  description: 'Calculate home loan EMI with property value, down payment, LTV ratio and full amortization schedule. Free housing loan calculator India.',
   applicationCategory: 'FinanceApplication',
   operatingSystem: 'All',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },

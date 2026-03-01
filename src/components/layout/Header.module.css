@@ -13,6 +13,12 @@
 
 .transparent { background: transparent; }
 
+
+[data-theme="light"] .transparent {
+  background: rgba(255,255,255,0.96);
+  box-shadow: 0 1px 0 rgba(15,23,42,0.08), 0 4px 18px rgba(15,23,42,0.08);
+}
+
 .scrolled {
   background: rgba(7,11,24,0.92);
   backdrop-filter: blur(20px);
@@ -54,7 +60,7 @@
   transition: color 0.2s, background 0.2s; white-space: nowrap;
 }
 .navLink:hover { color: #fff; background: rgba(255,255,255,0.1); }
-[data-theme="light"] .navLink { color: #1e293b; }
+[data-theme="light"] .navLink { color: #334155; }
 [data-theme="light"] .scrolled .navLink { color: #475569; }
 [data-theme="light"] .navLink:hover { color: #0f172a; background: rgba(15,23,42,0.08); }
 [data-theme="light"] .scrolled .navLink:hover { color: #0f172a; background: rgba(15,23,42,0.06); }

@@ -1,21 +1,16 @@
-// ─────────────────────────────────────────────────────────────
-// app/salary/take-home/page.jsx  →  SERVER COMPONENT (no 'use client')
-// Rule: metadata export ONLY works in Server Components
-// This file ONLY does: SEO metadata + JSON-LD + renders client component
-// ─────────────────────────────────────────────────────────────
-
 import TakeHomeSalaryCalculator from './TakeHomeSalaryCalculator';
 
-// ─── SEO Metadata ─────────────────────────────────────────────
 export const metadata = {
-  title: 'Take-Home Salary Calculator | MonexMint',
+  title: 'Take-Home Salary Calculator | MONEX MINT',
   description:
     'Calculate your monthly take-home salary from CTC. Free in-hand salary calculator with PF, income tax, HRA and all deductions for India.',
   keywords: 'take home salary calculator, in-hand salary, CTC calculator, salary after tax, India',
+   alternates: {
+    canonical: '/salary-tax/take-home',
+  },
   openGraph: {
-    title: 'Take-Home Salary Calculator | MonexMint',
-    description:
-      'Calculate your monthly take-home salary from CTC with all deductions including PF, income tax, and more.',
+     title: 'Take-Home Salary Calculator | MONEX MINT',
+    description: 'Calculate your monthly take-home salary from CTC. Free in-hand salary calculator with PF, income tax, HRA and all deductions for India.',
     type: 'website',
   },
 };
@@ -25,14 +20,13 @@ const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
   name: 'Take-Home Salary Calculator',
-  url: 'https://mywealthcircle.in/salary/take-home',
-  description: 'Free take-home salary calculator for India. Calculate in-hand salary from CTC.',
+  url: 'https://www.monexmint.com/salary/take-home',
+  description: 'Calculate your monthly take-home salary from CTC. Free in-hand salary calculator with PF, income tax, HRA and all deductions for India.',
   applicationCategory: 'FinanceApplication',
   operatingSystem: 'All',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
 };
 
-// ─── Page (Server Component) ───────────────────────────────────
 export default function TakeHomeSalaryPage() {
   return (
     <>

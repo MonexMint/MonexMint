@@ -1,13 +1,16 @@
 ﻿import BalanceTransferCalculator from './balancetransfercalculator';
 
 export const metadata = {
-  title: 'Loan Balance Transfer Calculator | MonexMint',
+  title: 'Loan Balance Transfer Calculator | MONEX MINT',
   description:
     'Calculate savings from transferring your loan to a lower interest rate lender. Break-even analysis included.',
   keywords: 'loan balance transfer calculator, home loan transfer savings India',
+  alternates: {
+    canonical: '/loans/balance-transfer',
+  },
   openGraph: {
-    title: 'Loan Balance Transfer Calculator | MonexMint',
-    description: 'Calculate savings from transferring your loan to a lower interest rate lender.',
+    title: 'Loan Balance Transfer Calculator | MONEX MINT',
+    description: 'Calculate savings from transferring your loan to a lower interest rate lender.Break-even analysis included.',
     type: 'website',
   },
 };
@@ -16,8 +19,8 @@ const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
   name: 'Loan Balance Transfer Calculator',
-  url: 'https://mywealthcircle.in/loans/balance-transfer',
-  description: 'Calculate savings from loan balance transfer with break-even analysis.',
+  url: 'https://www.monexmint.com/loans/balance-transfer',
+  description: 'Calculate savings from transferring your loan to a lower interest rate lender. Break-even analysis included.',
   applicationCategory: 'FinanceApplication',
   operatingSystem: 'All',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },

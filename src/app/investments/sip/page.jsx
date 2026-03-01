@@ -1,35 +1,31 @@
-// ─────────────────────────────────────────────────────────────
-// app/investments/sip/page.jsx  →  SERVER COMPONENT
-// ─────────────────────────────────────────────────────────────
-
 import SIPCalculator from './SIPCalculator';
 
-// ─── SEO Metadata ─────────────────────────────────────────────
 export const metadata = {
-  title: 'SIP Calculator | My Wealth Circle',
+  title: 'SIP Calculator | MONEX MINT',
   description:
     'Calculate SIP returns, maturity value and wealth gained. Free SIP calculator for mutual fund investments with yearly breakdown. India.',
   keywords: 'SIP calculator, mutual fund SIP, systematic investment plan calculator, SIP returns India',
+   alternates: {
+    canonical: '/investments/sip',
+  },
   openGraph: {
-    title: 'SIP Calculator | My Wealth Circle',
-    description: 'Calculate SIP returns and maturity value with yearly breakdown.',
+    title: 'SIP Calculator | MONEX MINT',
+    description: 'Calculate SIP returns, maturity value and wealth gained. Free SIP calculator for mutual fund investments with yearly breakdown. India.',
     type: 'website',
   },
 };
 
-// ─── JSON-LD Schema ───────────────────────────────────────────
 const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
   name: 'SIP Calculator',
-  url: 'https://mywealthcircle.in/investments/sip',
-  description: 'Calculate SIP returns for mutual fund investments.',
+  url: 'https://www.monexmint.com/investments/sip',
+  description: 'Calculate SIP returns, maturity value and wealth gained. Free SIP calculator for mutual fund investments with yearly breakdown. India.',
   applicationCategory: 'FinanceApplication',
   operatingSystem: 'All',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
 };
 
-// ─── Page ─────────────────────────────────────────────────────
 export default function SIPPage() {
   return (
     <>
