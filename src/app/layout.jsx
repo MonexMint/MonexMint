@@ -2,6 +2,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { ThemeProvider } from '@/context/ThemeContext';
 import '@/styles/globals.css';
+import Script from "next/script"; 
 
 export const metadata = {
   //  alternates: {
@@ -80,6 +81,20 @@ export default function RootLayout({ children }) {
         <link rel="icon"             href="/logoMM.png" type="image/png" />
         <link rel="shortcut icon"    href="/logoMM.png" type="image/png" />
         <link rel="apple-touch-icon" href="/logoMM.png" />
+        {/* <!-- Google tag (gtag.js) */}
+<Script
+  src="https://www.googletagmanager.com/gtag/js?id=G-N7GF8KD4NM"
+  strategy="afterInteractive"
+/>
+
+<Script id="google-analytics" strategy="afterInteractive">
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N7GF8KD4NM');
+  `}
+</Script>
       </head>
       <body>
         <ThemeProvider>
