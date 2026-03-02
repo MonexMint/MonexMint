@@ -4,9 +4,9 @@ import { ThemeProvider } from '@/context/ThemeContext';
 import '@/styles/globals.css';
 
 export const metadata = {
-   alternates: {
-    canonical: '/',
-  },
+  //  alternates: {
+  //   canonical: '/',
+  // },
 
   /*
     metadataBase: Fixes the Next.js console warning:
@@ -32,7 +32,7 @@ export const metadata = {
       { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
       { url: '/favicon.svg', type: 'image/svg+xml' },
     ],
-    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+    apple: [{ url: '/logoMM.png', sizes: '180x180', type: 'image/png' }],
     shortcut: ['/favicon.ico'],
   },
   manifest: '/site.webmanifest',

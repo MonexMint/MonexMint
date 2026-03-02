@@ -9,7 +9,7 @@ import styles from './Header.module.css';
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, mounted } = useTheme();
 
   const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark');
   const close = () => setMobileOpen(false);
@@ -26,7 +26,7 @@ export default function Header() {
       <div className={styles.container}>
 
         <Link href="/" className={styles.logo} onClick={close}>
-          <Image src="/logoMM.png" alt="MonexMint" width={110} height={32} style={{ height: "32px", width: "auto" }} priority />
+          <Image src="/logoMM.png" alt="MonexMint" width={110} height={32} priority />
           <span className={styles.logoText}>MONEX MINT</span>
         </Link>
 
@@ -35,7 +35,7 @@ export default function Header() {
           <Link href="/calculators" className={styles.navLink}>Calculators</Link>
           <Link href="/about"       className={styles.navLink}>About Us</Link>
           <button type="button" className={styles.themeBtn} onClick={toggleTheme} aria-label="Toggle theme">
-            {theme === 'dark' ? '☀️' : '🌙'}
+            {mounted && theme === 'dark' ? '☀️' : '🌙'}
           </button>
         </nav>
 
@@ -57,7 +57,7 @@ export default function Header() {
           <Link href="/calculators" onClick={close}>Calculators</Link>
           <Link href="/about"       onClick={close}>About Us</Link>
           <button type="button" className={styles.mobileThemeBtn} onClick={() => { toggleTheme(); close(); }}>
-            {theme === 'dark' ? '☀️  Light Mode' : '🌙  Dark Mode'}
+            {mounted && theme === 'dark' ? '☀️  Light Mode' : '🌙  Dark Mode'}
           </button>
         </div>
       )}
